@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class=img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTW0RXf8bADZ3_jIu0MX_G_fzOsPKQOnxgz8YKNu90fbVrMc43b" width="140" height="60">
+    </div>
+    <!--<h2 class ="text-white">
+        <i class="material-icons"></i>eMart</h2>-->
+    <button 
+        type="button" 
+        class="navbar-toggler" 
+        data-toggle="collapse" 
+        data-target="#collapse-nav-bar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapse-nav-bar">	
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a 
+                    class="nav-link  text-white" 
+                    routerLink="/">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a 
+                    class="nav-link  text-white" 
+                    routerLink="/item-list">Item List</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="/cart-list">Cart</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+              <a 
+                  class="nav-link text-white" 
+                  routerLink="/bill-list">Purchase History</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
